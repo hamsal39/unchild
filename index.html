@@ -22,21 +22,23 @@
           <a href="#members">Members</a>
           <a href="#songs">Discography</a>
           <a href="#visuals">Concept</a>
-          <a href="quiz-section">Quiz</a>
+          <a href="#quiz-section">Quiz</a>
         </div>
         <a href="#songs" class="nav-cta">Listen Now</a>
       </nav>
 
       <header class="hero">
-        <div class="hero-copy">
-          <p class="eyebrow">High Up Entertainment Rookie Group</p>
+        <div class="hero-copy">         
+          <div class="hero-content">
+         <p class="eyebrow">High Up Entertainment Rookie Group</p>
           <h1>UNCHILD</h1>
           <p class="hero-text">
             Breaking rules and defying standards. A 5th-generation K-pop powerhouse blending chaotic garage-rock pop riffs, intense choreography, and bold individuality.
           </p>
-          <div class="hero-actions">
-            <a href="#songs" class="btn btn-primary">Stream Debut</a>
-            <a href="quiz-section" class="btn btn-secondary">Take Quiz</a>
+        <div class="hero-actions">
+        <a href="#members" class="btn btn-primary">Star members</a>
+         <a href="#quiz-section" class="btn btn-secondary">Take Quiz</a>
+</div>
           </div>
           <div class="hero-tags">
             <span>5th Gen K-Pop</span>
@@ -52,7 +54,7 @@
         </div>
       </header>
 
-      <main class="content">
+      <main class="content" id="main">
         <section class="about-card" id="about">
           <div class="about-copy">
             <p class="section-label">The Concept</p>
@@ -63,7 +65,6 @@
           </div>
           <div class="about-stats">
             <div class="stat-card">
-              <div class="stat-icon">🌟</div>
               <strong>1.4M+</strong>
               <span>Monthly Spotify Listeners</span>
             </div>
@@ -203,7 +204,6 @@
             </div>
           </div>
         </section>
-        </main>
         <section class="visual-card" id="visuals">
           <div class="visual-copy">
             <p class="section-label">Visual Aesthetic</p>
@@ -320,5 +320,27 @@
     </script>
       </footer>
     </div>
+
+    <a href="#" class="back-to-top hidden" aria-label="Back to top" title="Back to top">↑</a>
+
+    <script>
+      const backToTopButton = document.querySelector(".back-to-top");
+
+      window.addEventListener("scroll", () => {
+        if (window.scrollY > 300) {
+          backToTopButton.classList.remove("hidden");
+        } else {
+          backToTopButton.classList.add("hidden");
+        }
+      });
+
+      backToTopButton.addEventListener('click', (e) => {
+        e.preventDefault();
+        window.scrollTo({
+          top: 0,
+          behavior: 'smooth'
+        });
+      });
+    </script>
   </body>
 </html>
