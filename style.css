@@ -1,548 +1,143 @@
-:root {
-  --bg-dark: #0a0b10;
-  --card-bg: rgba(20, 22, 32, 0.7);
-  --card-border: rgba(255, 255, 255, 0.08);
-  --text-main: #f3f4f6;
-  --text-muted: #9ca3af;
-  --accent-cyan: #00f0ff;
-  --accent-purple: #9d4edd;
-  --accent-glow: rgba(0, 240, 255, 0.35);
-  --font-body: 'Inter', sans-serif;
-  --font-display: 'Poppins', sans-serif;
-}
-
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  html {
-    scroll-behavior: smooth;
-  }
-}
-
 body {
-  background-color: var(--bg-dark);
-  color: var(--text-main);
-  font-family: var(--font-body);
-  line-height: 1.6;
-  overflow-x: hidden;
-  position: relative;
+  background-color:black;
+  color: #ffffff;
+  font-family: Arial, sans-serif;
+  padding: 20px;
+  margin: 0;
 }
 
-.background-glow {
-  position: fixed;
-  top: -20%;
-  left: -10%;
-  width: 60vw;
-  height: 60vw;
-  background: radial-gradient(circle, rgba(157, 78, 221, 0.15) 0%, transparent 70%);
-  z-index: -1;
-  pointer-events: none;
+#header {
+  background-color: #1a1a24;
+  padding: 15px;
+  border-radius: 10px;
+  margin-bottom: 20px;
 }
 
-.page-shell {
-  max-width: 1400px;
-  margin: 0 auto;
-  padding: 0 2rem;
+#logo {
+  display: inline;
+  color: #00f0ff;
+  font-size: 28px;
 }
 
-.top-nav {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 2rem 0;
+#nav {
+  float: right;
+  margin-top: 10px;
 }
 
-.brand {
-  font-family: var(--font-display);
-  font-weight: 800;
-  font-size: 1.75rem;
-  color: var(--text-main);
+#nav a {
+  color: #aaaaaa;
   text-decoration: none;
-  letter-spacing: -1px;
+  margin-left: 15px;
 }
 
-.nav-links a {
-  color: var(--text-muted);
+#nav a:hover {
+  color: #00f0ff;
+}
+
+#hero-section {
+  background-color: #1a1a24;
+  padding: 30px;
+  border-radius: 10px;
+  margin-bottom: 30px;
+}
+
+.hero-left {
+  float: left;
+  width: 55%;
+}
+
+.hero-right {
+  float: right;
+  width: 40%;
+}
+
+.hero-left h2 {
+  font-size: 32px;
+  color: #00f0ff;
+}
+
+.fake-button {
+  background-color: #00f0ff;
+  color: #111116;
+  padding: 10px 20px;
   text-decoration: none;
-  margin: 0 1.5rem;
-  font-weight: 500;
-  transition: color 0.3s ease;
-}
-
-.nav-links a:hover {
-  color: var(--accent-cyan);
-}
-
-.nav-cta {
-  background: transparent;
-  color: var(--accent-cyan);
-  border: 2px solid var(--accent-cyan);
-  padding: 0.6rem 1.5rem;
-  border-radius: 50px;
-  text-decoration: none;
-  font-weight: 600;
-  transition: all 0.3s ease;
-}
-
-.nav-cta:hover {
-  background: var(--accent-cyan);
-  color: var(--bg-dark);
-  box-shadow: 0 0 15px var(--accent-glow);
-}
-
-.hero {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 4rem;
-  align-items: center;
-  padding: 4rem 0;
-}
-
-.eyebrow {
-  color: var(--accent-purple);
-  text-transform: uppercase;
-  font-weight: 700;
-  letter-spacing: 2px;
-  font-size: 0.85rem;
-  margin-bottom: 1rem;
-}
-
-.hero-text {
-  color: var(--text-muted);
-  font-size: 1.15rem;
-  margin-bottom: 2.5rem;
-}
-
-.hero-actions {
-  display: flex;
-  gap: 1.5rem;
-  margin-bottom: 3rem;
-}
-
-.btn {
-  padding: 1rem 2.5rem;
-  border-radius: 8px;
-  text-decoration: none;
-  font-weight: 700;
-  transition: all 0.3s ease;
+  font-weight: bold;
+  border-radius: 5px;
   display: inline-block;
+  margin-right: 10px;
+}
+
+.fake-button:hover {
+  background-color: #9d4edd;
+  color: white;
+}
+
+#about, #songs, #quiz {
+  background-color: #1a1a24;
+  padding: 20px;
+  border-radius: 10px;
+  margin-bottom: 30px;
+}
+
+h3 {
+  color: #00f0ff;
+  font-size: 24px;
+  margin-top: 0;
+}
+
+#members {
+  background-color: #1a1a24;
+  padding: 20px;
+  border-radius: 10px;
+  margin-bottom: 30px;
+}
+
+.member-box {
+  float: left;
+  width: 29%;
+  background-color: #252533;
+  margin: 1%;
+  padding: 15px;
+  border-radius: 8px;
   text-align: center;
 }
 
-.btn-primary {
-  background: var(--text-main);
-  color: var(--bg-dark);
+.avatar {
+  width: 80px;
+  height: 80px;
+  border-radius: 40px;
+  border: 2px solid #00f0ff;
 }
 
-.btn-primary:hover {
-  background: var(--accent-cyan);
-  box-shadow: 0 0 25px var(--accent-glow);
-  color: var(--bg-dark);
+.song-box {
+  background-color: #252533;
+  padding: 15px;
+  border-radius: 8px;
+  margin-bottom: 15px;
 }
 
-.btn-secondary {
-  border: 2px solid var(--card-border);
-  color: var(--text-main);
-  background: transparent;
-}
-
-.btn-secondary:hover {
-  border-color: var(--accent-cyan);
-  color: var(--accent-cyan);
-  box-shadow: 0 0 15px rgba(0, 240, 255, 0.1);
-}
-
-.hero-tags span {
-  font-size: 0.85rem;
-  background: rgba(255, 255, 255, 0.05);
-  padding: 0.5rem 1rem;
-  border-radius: 50px;
-  margin-right: 0.75rem;
-  border: 1px solid var(--card-border);
-}
-
-.hero-visual img {
+.quiz-btn {
+  background-color: #252533;
+  color: violet;
+  border: 1px solid #00f0ff;
+  padding: 10px;
   width: 100%;
-  height: 550px;
-  object-fit: cover;
-  border-radius: 20px;
-  border: 1px solid var(--card-border);
-}
-
-.content {
-  display: flex;
-  flex-direction: column;
-  gap: 6rem;
-  padding: 4rem 0;
-}
-
-.section-label {
-  color: var(--accent-cyan);
-  text-transform: uppercase;
-  font-weight: 600;
-  letter-spacing: 2px;
-  font-size: 0.85rem;
-  margin-bottom: 0.5rem;
-}
-
-.about-stats {
-  display: flex;
-  flex-direction: column;
-  gap: 1.5rem;
-}
-
-.stat-card {
-  background: rgba(255, 255, 255, 0.02);
-  border: 1px solid var(--card-border);
-  padding: 1.5rem;
-  border-radius: 16px;
-  display: flex;
-  flex-direction: column;
-}
-
-.stat-card span {
-  color: var(--text-muted);
-  font-size: 0.9rem;
-}
-
-.highlights-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 2rem;
-}
-
-.highlight-item {
-  background: var(--card-bg);
-  border: 1px solid var(--card-border);
-  padding: 3rem 2rem;
-  border-radius: 20px;
-}
-
-.members-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 2.5rem;
-}
-
-.member-card {
-  background: var(--card-bg);
-  border: 1px solid var(--card-border);
-  border-radius: 24px;
-  padding: 3rem 2rem;
-  text-align: center;
-  backdrop-filter: blur(12px);
-  transition: transform 0.3s ease, border-color 0.3s ease;
-}
-
-.member-card:hover {
-  transform: translateY(-5px);
-  border-color: var(--accent-cyan);
-}
-
-.member-avatar {
-  width: 110px;
-  height: 110px;
-  border-radius: 50%;
-  margin: 0 auto 1.5rem auto;
-  overflow: hidden;
-  border: 3px solid var(--accent-cyan);
-  box-shadow: 0 0 20px rgba(0, 240, 255, 0.15);
-  background: #181922;
-}
-
-.member-avatar img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  display: block;
-}
-
-.member-role {
-  color: var(--accent-purple);
-  font-size: 0.85rem;
-  font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  margin-bottom: 1rem;
-}
-
-.member-card p:not(.member-role) {
-  color: var(--text-muted);
-  font-size: 0.95rem;
-}
-
-.songs-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 2.5rem;
-}
-
-.song-card {
-  background: var(--card-bg);
-  border: 1px solid var(--card-border);
-  padding: 3rem;
-  border-radius: 24px;
-  display: flex;
-  flex-direction: column;
-}
-
-.song-artist {
-  color: var(--accent-purple);
-  font-weight: 600;
-  font-size: 0.9rem;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  margin-bottom: 1.5rem;
-}
-
-.song-card p {
-  color: var(--text-muted);
-  flex-grow: 1;
-  margin-bottom: 2rem;
-}
-
-.media-embed-container iframe {
-  display: block;
-  border: none;
-  background: transparent;
-}
-
-.quiz-container {
-  background: var(--card-bg);
-  border: 1px solid var(--card-border);
-  border-radius: 24px;
-  padding: 3rem;
-  max-width: 700px;
-  margin: 0 auto;
-  text-align: center;
-  backdrop-filter: blur(12px);
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
-}
-
-.quiz-options {
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
-}
-
-.quiz-opt-btn {
-  background: rgba(255, 255, 255, 0.03);
-  border: 1px solid var(--card-border);
-  color: var(--text-main);
-  padding: 1.2rem;
-  border-radius: 12px;
-  font-family: var(--font-body);
-  font-size: 1rem;
-  font-weight: 500;
   text-align: left;
+  margin-bottom: 10px;
+  border-radius: 5px;
   cursor: pointer;
-  transition: all 0.25s ease;
 }
 
-.quiz-opt-btn:hover {
-  background: rgba(0, 240, 255, 0.08);
-  border-color: var(--accent-cyan);
-  transform: translateX(5px);
+.quiz-btn:hover {
+  background-color: #00f0ff;
+  color:green;
 }
 
-.hidden {
-  display: none !important;
-}
-
-#quiz-result {
-  animation: fadeIn 0.5s ease forwards;
-}
-
-.result-title {
-  color: var(--accent-purple);
-  text-transform: uppercase;
-  font-weight: 700;
-  letter-spacing: 1.5px;
-  font-size: 0.9rem;
-  margin-bottom: 0.5rem;
-}
-
-#result-desc {
-  color: var(--text-muted);
-  font-size: 1.1rem;
-  line-height: 1.5;
-}
-
-@keyframes fadeIn {
-  from { opacity: 0; transform: translateY(10px); }
-  to { opacity: 1; transform: translateY(0); }
-}
-
-.visual-card {
-  display: grid;
-  grid-template-columns: 1fr 1.5fr;
-  gap: 4rem;
-  align-items: center;
-}
-
-.visual-frame img {
-  width: 100%;
-  height: 450px;
-  object-fit: cover;
-  border-radius: 24px;
-  border: 1px solid var(--card-border);
-}
-
-.site-footer {
-  border-top: 1px solid var(--card-border);
-  padding: 3rem 0;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  color: var(--text-muted);
-  font-size: 0.9rem;
-}
-
-.footer-links a {
-  color: var(--text-muted);
-  text-decoration: none;
-  margin-left: 2rem;
-  transition: color 0.3s ease;
-}
-
-.footer-links a:hover {
-  color: var(--accent-cyan);
-}
-
-/* Shared heading and display font styles */
-.hero h1,
-.section-header h2,
-.about-copy h2,
-.stat-card strong,
-.highlight-item strong,
-.member-card h3,
-.song-number,
-.song-card h3,
-.quiz-question,
-#result-name,
-.visual-copy h2 {
-  font-family: var(--font-display);
-}
-
-.hero h1 {
-  font-size: 4.5rem;
-  font-weight: 800;
-  line-height: 1.1;
-  margin-bottom: 1.5rem;
-  letter-spacing: -2px;
-}
-
-.section-header h2 {
-  font-size: 2.5rem;
-  font-weight: 700;
-  margin-bottom: 3rem;
-}
-
-.about-card {
-  background: var(--card-bg);
-  border: 1px solid var(--card-border);
-  border-radius: 24px;
-  padding: 4rem;
-  display: grid;
-  grid-template-columns: 1.5fr 1fr;
-  gap: 4rem;
-  align-items: center;
-  backdrop-filter: blur(12px);
-}
-
-.about-copy h2,
-.visual-copy h2 {
-  font-size: 2.5rem;
-  margin-bottom: 1.5rem;
-}
-
-.stat-card strong {
-  font-size: 2rem;
-  color: var(--accent-cyan);
-}
-
-.highlight-item strong {
-  font-size: 3rem;
-  color: rgba(255, 255, 255, 0.05);
-  display: block;
-  margin-bottom: 1rem;
-  line-height: 1;
-}
-
-.member-card h3, .song-card h3, .quiz-question {
-  font-size: 1.5rem;
-  margin-bottom: 0.25rem;
-}
-
-#result-name {
-  font-size: 3rem;
-  color: var(--accent-cyan);
-  margin-bottom: 1rem;
-}
-
-@media (max-width: 1024px) {
-  .hero, .about-card, .visual-card {
-    grid-template-columns: 1fr;
-    gap: 3rem;
-  }
-  .members-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-  .songs-grid, .highlights-grid {
-    grid-template-columns: 1fr;
-  }
-  .hero-visual img {
-    height: 400px;
-  }
-}
-
-@media (max-width: 640px) {
-  .members-grid {
-    grid-template-columns: 1fr;
-  }
-  .hero h1 {
-    font-size: 3rem;
-  }
-  .top-nav {
-    flex-direction: column;
-    gap: 1.5rem;
-  }
-  .site-footer {
-    flex-direction: column;
-    gap: 1.5rem;
-    text-align: center;
-  }
-  .footer-links a {
-    margin: 0 1rem;
-  }
-}
-
-.back-to-top {
-  position: fixed;
-  bottom: 2rem;
-  right: 2rem;
-  background-color: var(--accent-cyan);
-  color: var(--bg-dark);
-  width: 50px;
-  height: 50px;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 1.5rem;
-  text-decoration: none;
-  transition: opacity 0.3s ease, transform 0.3s ease;
-  z-index: 100;
-  box-shadow: 0 4px 15px var(--accent-glow);
-  border: none;
-}
-
-.back-to-top.hidden {
-  opacity: 0;
-  transform: translateY(20px);
-  pointer-events: none;
+#footer {
+  text-align: center;
+  color: #666666;
+  font-size: 12px;
+  margin-top: 40px;
+  border-top: 1px solid #252533;
+  padding-top: 20px;
 }
